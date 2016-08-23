@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 // 1st & Pike figures
 var pike = {
   minCust: 23,
@@ -204,3 +204,25 @@ var alki = {
 
 alki.cookiesPerDay();
 alki.render();
+*/
+
+
+// Tuesday
+function Store(name, ave, min, max) {
+  this.name = name;
+  this.avgCookies = avg;
+  this.minCust = min;
+  this.maxCust = max;
+}
+
+Store.prototype.methodName = function () {
+  return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+};
+
+var pikePlace = new Store('Pike Place', 6.3, 23, 65);
+var sCenter = new Store('Seattle Center', 3.7, 11, 28);
+
+console.log(pikePlace, sCenter);
+
+pike.render();
+sCenter.render();
