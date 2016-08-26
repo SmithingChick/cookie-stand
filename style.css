@@ -1,16 +1,32 @@
-font-family: 'Alegreya Sans', sans-serif;
-font-family: 'Josefin Sans', sans-serif;
-font-family: 'Lobster', cursive;
-
-
-h1 h2 h3 h4 h5 h6 {
+@font-face {
+  font-family: 'Alegreya Sans','Verdana', sans-serif;
+  font-family: 'Josefin Sans', 'Arial' sans-serif;
   font-family: 'Lobster', cursive;
+  src url = ("https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,700,700i|Josefin+Sans:400,400i,700|Lobster&subset=latin-ext");
 }
 
-table, th, td {
-  border: 1px solid black;
+body {
+  width: 750px;
+  background-color: #dba99c;
+}
+
+h1, h2, h3, h4, h5, h6, {
+  font-family: 'Lobster', cursive;
+  color: #235a96;
+}
+
+p {
+  font-family: 'Alegreya Sans','Verdana', sans-serif;
+  color: #233255;
+}
+
+table, th, td, tr {
+  border: 1px solid #235a96;
+  font-family: 'Josefin Sans', 'Arial' sans-serif;
+  background-color: #aaebf0;
+  color: ##233255;
 }
 
 th {
-  width: 100px;
+  background-color: #239bc8;
 }
