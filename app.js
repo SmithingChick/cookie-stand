@@ -39,7 +39,7 @@ function tableCreate() {
 console.log('table up?');
 tableCreate();
 
-
+//store info - name, average cookies, minimum daily customers, maximum daily customers
 function Store(name, avg, min, max) {
   this.name = name;
   console.log(this.name);
@@ -49,6 +49,8 @@ function Store(name, avg, min, max) {
   console.log(this.minCust);
   this.maxCust = max;
   console.log(this.maxCust);
+  //add this.totalCookiesPerDay Here
+  //add this.totalCookiesPerHour Here
 }
 
 Store.prototype.render = function () { // creating table row
@@ -67,7 +69,7 @@ Store.prototype.render = function () { // creating table row
   table.appendChild(tableRow);
 };
 
-
+//generate number of hourly customers per store
 Store.prototype.generateRandom = function () {
   return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
   console.log('math');
