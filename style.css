@@ -5,21 +5,56 @@
   src: url ("https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,700,700i|Josefin+Sans:400,400i,700|Lobster&subset=latin-ext");
 }
 
-main {
-margin: auto;
+
+div.main {
+  margin: auto;
   width: 80%
-  max-width: 700px;
+  max-width: 800px;
   background-color: #dba99c;
 }
+
+
+
+#front-page {
+  background-image: url("images/water-header.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
 
 h1, h2, h3, h4, h5, h6, {
   font-family: 'Lobster', cursive;
   color: #235a96;
 }
 
+
+h1.front-page-header-1 {
+  font-family: 'Lobster', cursive;
+  font-size: 36pt;
+  color: #233255;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+h2.front-page-header-2 {
+  font-family: 'Lobster', cursive;
+  font-size: 30pt;
+  color: #233255;
+  margin-left: 50px;
+  margin-bottom: 40px;
+}
+
+#sales_data {
+  width: 90%;
+  margin: auto;
+}
+
+
 p {
   font-family: 'Alegreya Sans','Verdana', sans-serif;
   color: #233255;
+  padding-left: 30px;
 }
 
 table, th, td, tr {
