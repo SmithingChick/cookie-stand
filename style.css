@@ -5,21 +5,40 @@
   src: url ("https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,700,700i|Josefin+Sans:400,400i,700|Lobster&subset=latin-ext");
 }
 
-
-div.main {
+main {
   margin: auto;
-  width: 80%
+  width: 80%;
   max-width: 800px;
   background-color: #dba99c;
 }
 
 
-
 #front-page {
+  background-image: url("images/water-header-narrow.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+
+#content-page {
   background-image: url("images/water-header.png");
   width: 100%;
   background-repeat: no-repeat;
   margin: 0;
+}
+
+nav {
+  background-color: #2378b4;
+  height: 30px;
+
+}
+
+nav.a {
+font-family: 'Josefin Sans', 'Arial' sans-serif;
+font-size: 16pt;
+font-weight: 700;
+color: #aaebf0;
 }
 
 
@@ -29,7 +48,7 @@ h1, h2, h3, h4, h5, h6, {
 }
 
 
-h1.front-page-header-1 {
+h1.content-page-header-1 {
   font-family: 'Lobster', cursive;
   font-size: 36pt;
   color: #233255;
@@ -37,7 +56,7 @@ h1.front-page-header-1 {
   margin-top: 30px;
 }
 
-h2.front-page-header-2 {
+h2.content-page-header-2 {
   font-family: 'Lobster', cursive;
   font-size: 30pt;
   color: #233255;
@@ -45,17 +64,18 @@ h2.front-page-header-2 {
   margin-bottom: 40px;
 }
 
-#sales_data {
-  width: 90%;
-  margin: auto;
-}
-
-
 p {
   font-family: 'Alegreya Sans','Verdana', sans-serif;
   color: #233255;
   padding-left: 30px;
 }
+
+
+#sales_data {
+  width: 90%;
+  margin: auto;
+}
+
 
 table, th, td, tr {
   border: 1px solid #235a96;
@@ -66,4 +86,14 @@ table, th, td, tr {
 
 th {
   background-color: #239bc8;
+}
+
+div.left-sidebar {
+  width: 20%;
+  max-width: 200 px;
+  background-color: #46c3dc
+
+}
+img.store-link {
+  width: 125px;
 }
