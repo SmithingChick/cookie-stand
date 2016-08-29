@@ -2,11 +2,13 @@
   font-family: 'Alegreya Sans','Verdana', sans-serif;
   font-family: 'Josefin Sans', 'Arial' sans-serif;
   font-family: 'Lobster', cursive;
-  src url = ("https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,700,700i|Josefin+Sans:400,400i,700|Lobster&subset=latin-ext");
+  src: url ("https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,700,700i|Josefin+Sans:400,400i,700|Lobster&subset=latin-ext");
 }
 
-body {
-  width: 750px;
+main {
+margin: auto;
+  width: 80%
+  max-width: 700px;
   background-color: #dba99c;
 }
 
