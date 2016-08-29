@@ -19,11 +19,11 @@ function tableCreate() {
   //table body
   var tableRow = document.createElement('tr');
   var rowHeader = document.createElement('th');
-  rowHeader.textContent = 'store'; // needs to be store name
+  rowHeader.textContent = this.name;
   tableRow.appendChild(rowHeader);
   for (i = 0; i < headerContent.length - 1; i++) {
     var bodyContent = document.createElement('td');
-    bodyContent.textContent = 9; //store avg hour sales
+    bodyContent.textContent = this.totalCookiesPerHour = [];
     tableRow.appendChild(bodyContent);
     console.log('begin render');
   }
@@ -42,15 +42,13 @@ tableCreate();
 //store info - name, average cookies, minimum daily customers, maximum daily customers
 function Store(name, avg, min, max) {
   this.name = name;
-  console.log(this.name);
   this.avgCookies = avg;
-  console.log(this.avgCookies);
   this.minCust = min;
-  console.log(this.minCust);
   this.maxCust = max;
-  console.log(this.maxCust);
-  //add this.totalCookiesPerDay Here
-  //add this.totalCookiesPerHour Here
+  console.log(this.name, this.avgCookies, this.minCust, this.maxCust);
+  this.totalCookiesPerDay = 0;
+  this.totalCookiesPerHour = [];
+  console.log(this.totalCookiesPerDay, this.totalCookiesPerHour);
 }
 
 Store.prototype.render = function () { // creating table row
@@ -75,11 +73,15 @@ Store.prototype.generateRandom = function () {
   console.log('math');
 };
 Store.prototype.cookiesPerHour = function () {
-  // generate random number & multipy it by avg cookies
+  return Math.floor(this.generateRandom() * this.avgCookies);
   this.generateRandom = hourTotal ;
 };
 Store.prototype.cookiesPerDay = function () {
-  // generate cookie total for each hour and keep running total and also store each hours total in an array in our store object
+  for (var i = 6; i < 20; i++) {
+    var cookiesNow = this.cookiesPerHour();
+    this.hourCookies.push(cookiesNow);
+    this.totalCookies += cookiesNow;
+  }
 };
 
 
