@@ -60,7 +60,25 @@ Store.prototype.render = function () { // creating table row
   tableRow.appendChild(rowHeader);
   for (var i = 0; i < 16; i++) {
     var bodyContent = document.createElement('td');
-    bodyContent.textContent = 9; //store avg hour sales
+    bodyContent.textContent = hourTotal; //store avg hour sales
+    //is hours array set up properly?
+    //from Day 11 Code Review
+  //  for(var p= 0 ; p stores.length; p++) {
+  //    var row= stores[p];render();
+  //    tableBody.appendChild(row);
+  //  } partially copied from code review
+  //  for (var storeC = 0; storeC < stores.length; storeC++){
+  //    hourTotal +=stores[storeC].hourly[hours]; hours = 1
+  //    totalData.textContent = hourTotal[hours];
+  //  }
+  // var hourTotal
+  //var totalHead.textContent = 'Total';
+  // for (var hours = 1; hours <time.length; storeC++){
+  //    var td = document.createElement('td');
+  //    hourTotal = 0;
+  //    console.log(time[hours]);
+  //  for var storeC
+  //  }
     tableRow.appendChild(bodyContent);
     console.log('begin render');
   }
@@ -72,15 +90,18 @@ Store.prototype.generateRandom = function () {
   return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
   console.log('math');
 };
+//generate number of cookies per hour
 Store.prototype.cookiesPerHour = function () {
   return Math.floor(this.generateRandom() * this.avgCookies);
   this.generateRandom = hourTotal ;
 };
+//generate number of total cooies per day
 Store.prototype.cookiesPerDay = function () {
+//    var cookiesDay;
   for (var i = 6; i < 20; i++) {
-    var cookiesNow = this.cookiesPerHour();
-    this.hourCookies.push(cookiesNow);
-    this.totalCookies += cookiesNow;
+    var cookiesHere = this.cookiesPerHour();
+    this.hourCookies.push(cookiesHere);
+    this.totalCookies += cookiesHere;
   }
 };
 

@@ -9,7 +9,7 @@ main {
   margin: auto;
   width: 80%;
   max-width: 800px;
-  background-color: #dba99c;
+  background-color: #f0c8c8;
 }
 
 
@@ -35,10 +35,10 @@ nav {
 }
 
 nav.a {
-font-family: 'Josefin Sans', 'Arial' sans-serif;
-font-size: 16pt;
-font-weight: 700;
-color: #aaebf0;
+  font-family: 'Josefin Sans', 'Arial' sans-serif;
+  font-size: 16pt;
+  font-weight: 700;
+  color: #aaebf0;
 }
 
 
