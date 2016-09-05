@@ -19,11 +19,11 @@ function tableCreate() {
   //table body
   var tableRow = document.createElement('tr');
   var rowHeader = document.createElement('th');
-  rowHeader.textContent = this.name;
+  rowHeader.textContent = name;
   tableRow.appendChild(rowHeader);
   for (i = 0; i < headerContent.length - 1; i++) {
     var bodyContent = document.createElement('td');
-    bodyContent.textContent = this.totalCookiesPerHour = [];
+    bodyContent.textContent = this.totalCookiesPerHour;
     tableRow.appendChild(bodyContent);
     console.log('begin render');
   }

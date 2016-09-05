@@ -14,16 +14,18 @@ main {
 
 
 #front-page {
-  background-image: url("images/water-header-narrow.png");
+  background-image: url("images/water-header.png");
   width: 100%;
+  height: auto;
   background-repeat: no-repeat;
   margin: 0;
 }
 
 
 #content-page {
-  background-image: url("images/water-header.png");
+  background-image: url("images/water-header-narrow.png");
   width: 100%;
+
   background-repeat: no-repeat;
   margin: 0;
 }
@@ -31,7 +33,6 @@ main {
 nav {
   background-color: #2378b4;
   height: 30px;
-
 }
 
 nav.a {
