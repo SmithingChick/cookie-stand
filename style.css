@@ -52,7 +52,9 @@ a.nav-bar {
   font-family: 'Josefin Sans', 'Arial' sans-serif;
   font-size: 16pt;
   font-weight: 700;
-  color: #dba99c;
+  color: #46c3dc;
+	padding-left: 30px;
+	padding-right: 30px;
 }
 
 
