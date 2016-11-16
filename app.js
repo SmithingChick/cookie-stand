@@ -9,18 +9,6 @@ var pikePlace = {
   total: 0,
   salesPerHour: [],
 
-  listHours: function() {
-    var contentArea = document.getElementById('sales_data');
-    var ul = document.createElement('ul');
-    var li;
-
-    for (var i = 0; i < this.hours.length; i++) {
-      li = document.createElement('li');
-      li.textContent = this.hours[i];
-      ul.appendChild(li);
-    }
-    contentArea.appendChild(ul);
-  },
 
   getRandomInt: function() {
     var min = Math.ceil(this.minCustomers);
@@ -29,8 +17,8 @@ var pikePlace = {
   },
 
   cookiesPerHour: function() {
-    var projectedSales = Math.round(this.getRandomInt() * this.avgSales);
-    return projectedSales;
+    var hourlySales = Math.round(this.getRandomInt() * this.avgSales);
+    return hourlySales;
   },
 
   cookiesPerDay: function() {
@@ -42,22 +30,42 @@ var pikePlace = {
       this.salesPerHour.push(dailyCookieCount);
     }
     console.log(this.salesPerHour);
+
   },
 
   toHtml: function() {
-    this.cookiesPerDay();
+    //this.cookiesPerDay();
+    var contentArea = document.getElementById('sales_data');
     var unorderedList = document.createElement('ul');
     var storeNameListItem = document.createElement('li');
     var totalListItem = document.createElement('li');
+    var hourlyListItem;
+    var hourMessage;
 
     storeNameListItem.textContent = this.name;
     unorderedList.appendChild(storeNameListItem);
 
+    for (var i = 0; i < this.hours.length; i++) {
+      console.log(i);
+      hourlyListItem = document.createElement('li');
+      hourMessage = this.hours[i] + ': ' + this.salesPerHour[i];
+      console.log(hourMessage);
+      hourlyListItem.textContent = hourMessage;
+      unorderedList.appendChild(hourlyListItem);
+    }
+
     totalListItem.textContent = 'Total: ' + this.total;
     unorderedList.appendChild(totalListItem);
+    contentArea.appendChild(unorderedList);
+    //
+    // return unorderedList;
+    // return storeNameListItem;
+    // return hourlyListItem;
+    // //return hourMessage;
+    // return totalListItem;
   }
 };
-console.log(pikePlace.listHours());
+//console.log(pikePlace.listHours());
 console.log(pikePlace);
 pikePlace.cookiesPerDay();
 pikePlace.toHtml();
