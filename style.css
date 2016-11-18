@@ -8,16 +8,13 @@
 body{
   background-color: #f0c8c8;
 }
-	
+
 main {
-  margin: auto;
-  width: 80%;
-  max-width: 800px;
-	color: 233255;
+  display: inline-block;
 }
 
-<!-- index page header --> 
-#front-page {
+<!-- index page header -->
+header {
   background-image: url("images/water-header.png");
   width: 100%;
   height: auto;
@@ -26,7 +23,8 @@ main {
 }
 
 #logo-salmon {
-	width: 200px;
+	width: 300px;
+  padding-left: 50px;
 	float: left;
 }
 
@@ -39,24 +37,18 @@ main {
 }
 
 nav {
-  font-family: 'Josefin Sans', 'Arial' sans-serif;
-  font-size: 16pt;
-  font-weight: 700;
-  color: #aaebf0;
   background-color: #2378b4;
   height: 30px;
-	padding: 5px 30px 5px 30px;
 }
 
-a.nav-bar {
+a.nav {
   font-family: 'Josefin Sans', 'Arial' sans-serif;
   font-size: 16pt;
   font-weight: 700;
   color: #46c3dc;
-	padding-left: 30px;
-	padding-right: 30px;
+  display: inline-block;
+	padding: 10px 30px 10px 30px;
 }
-
 
 h1 h2 h3 h4 h5 h6 {
   font-family: 'Lobster', cursive;
@@ -102,8 +94,9 @@ p {
 }
 
 
-#sales_data {
-  width: 90%;
+.sales_data {
+  width: 80%;
+  max-width: 800px;
   margin: auto;
 }
 
@@ -120,12 +113,13 @@ th {
 }
 
 div.left-sidebar {
-  width: 20%;
-  max-width: 200 px;
+  width: 250px;
   background-color: #aaebf0;
+  padding-top: 35px;
+  padding-left: 35px;
 }
 
-img.store-link {	
-  width: 125px;
-  margin-left: 20px;
+img.store-link {
+  width: 200px;
+  margin: 10px auto;
 }
